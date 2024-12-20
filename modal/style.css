@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 5px;
+    height: 3rem ;
+    width: 8rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all ease 0.8s;
+    z-index: 0;
+}
+.btn:hover{
+    color: black;
+    background-color: rgb(243, 128, 6);
+}
+
+.janela-modal{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgb(93, 92, 92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+.modal{
+    width: 60%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: #ffffff83;
+    padding: 50px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1002;
+}
+
+
+.fechar{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(244, 159, 0, 0.974);
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.janela-modal.abrir{
+    display: flex;
+}
+
+@keyframes abrirmodal{
+    from{
+        opacity: 0;
+        transform: translate3d(0,-20px,-5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.abrir,.modal{
+    animation: abrirmodal 0.5s ;
+}
